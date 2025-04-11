@@ -162,7 +162,7 @@ export default function ComingSoonPage() {
 
     try {
       const res = await fetch("/api/send-notify", {
-        method: "PUT",
+        method: "GET",
         headers: {
           "Content-Type": "application/json",
         },
