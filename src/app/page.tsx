@@ -165,6 +165,7 @@ export default function ComingSoonPage() {
         `${process.env.NEXT_PUBLIC_API_URL}/send-notify`,
         {
           method: "POST",
+          mode: "no-cors",
           headers: {
             "Content-Type": "application/json",
           },
