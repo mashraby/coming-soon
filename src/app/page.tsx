@@ -17,7 +17,7 @@ import { toast } from "sonner";
 export default function ComingSoonPage() {
   // Countdown state
   const [timeLeft, setTimeLeft] = useState({
-    days: 20,
+    days: 40,
     hours: 0,
     minutes: 0,
     seconds: 0,
@@ -87,7 +87,7 @@ export default function ComingSoonPage() {
   useEffect(() => {
     // Set the target date to 20 days from now
     const targetDate = new Date("2025-03-20T00:00:00Z");
-    targetDate.setDate(targetDate.getDate() + 20);
+    targetDate.setDate(targetDate.getDate() + 40);
 
     const interval = setInterval(() => {
       const now = new Date();
