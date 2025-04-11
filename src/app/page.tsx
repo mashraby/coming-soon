@@ -161,13 +161,16 @@ export default function ComingSoonPage() {
     const email = formData.get("email");
 
     try {
-      const res = await fetch("/api/send-notify", {
-        method: "GET",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ email }),
-      });
+      const res = await fetch(
+        `${process.env.NEXT_PUBLIC_API_URL}/send-notify`,
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ email }),
+        }
+      );
 
       const data = await res.json();
 
