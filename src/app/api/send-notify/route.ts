@@ -15,7 +15,7 @@ async function getLocation(ip: string) {
   }
 }
 
-export default async function POST(req: Request) {
+export async function POST(req: Request) {
   if (!TELEGRAM_BOT_TOKEN || !TELEGRAM_CHAT_ID) {
     return NextResponse.json(
       { error: "Missing Telegram configuration" },
